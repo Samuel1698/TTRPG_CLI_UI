@@ -1,0 +1,58 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="TemplateLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CLIInstallLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_Background" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images-background2md.txt</Value>
+    </Setting>
+    <Setting Name="Setting_Monster" Type="System.String" Scope="User">
+      <Value Profile="(Default)">monster2md-yamlStatblock-body.txt</Value>
+    </Setting>
+    <Setting Name="Setting_Item" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images-item2md.txt</Value>
+    </Setting>
+    <Setting Name="Setting_Race" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images-race2md.txt</Value>
+    </Setting>
+    <Setting Name="Setting_Spell" Type="System.String" Scope="User">
+      <Value Profile="(Default)">images-spell2md.txt</Value>
+    </Setting>
+    <Setting Name="Setting_Compendium" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/3-Mechanics/CLI</Value>
+    </Setting>
+    <Setting Name="Setting_Rules" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/3-Mechanics/CLI</Value>
+    </Setting>
+    <Setting Name="Setting_From" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MM</Value>
+    </Setting>
+    <Setting Name="Setting_Adventure" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LMoP</Value>
+    </Setting>
+    <Setting Name="Setting_Book" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PHB,
+DMG</Value>
+    </Setting>
+    <Setting Name="Setting_JSON" Type="System.String" Scope="User">
+      <Value Profile="(Default)">My.Config.File.json</Value>
+    </Setting>
+    <Setting Name="Setting_Config" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_DataFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_RelativeTemplatePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_ImageFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
