@@ -24,10 +24,10 @@
       <Value Profile="(Default)">images-spell2md.txt</Value>
     </Setting>
     <Setting Name="Setting_Compendium" Type="System.String" Scope="User">
-      <Value Profile="(Default)">/3-Mechanics/CLI</Value>
+      <Value Profile="(Default)">test</Value>
     </Setting>
     <Setting Name="Setting_Rules" Type="System.String" Scope="User">
-      <Value Profile="(Default)">/3-Mechanics/CLI</Value>
+      <Value Profile="(Default)">test</Value>
     </Setting>
     <Setting Name="Setting_From" Type="System.String" Scope="User">
       <Value Profile="(Default)">MM</Value>
@@ -36,8 +36,9 @@
       <Value Profile="(Default)">LMoP</Value>
     </Setting>
     <Setting Name="Setting_Book" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PHB,
-DMG</Value>
+      <Value Profile="(Default)">xPHB,
+xDMG,
+xMM,</Value>
     </Setting>
     <Setting Name="Setting_JSON" Type="System.String" Scope="User">
       <Value Profile="(Default)">My.Config.File.json</Value>
@@ -53,6 +54,36 @@ DMG</Value>
     </Setting>
     <Setting Name="Setting_ImageFolder" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_DataFolder_Full" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_Homebrew_Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_Homebrew" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_InstallTemplateLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_Use_FantasyStat" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Setting_Use_DiceRoller" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Setting_Copy_ExternalImages" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Setting_Copy_InternalImages" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Setting_Reference" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting_ReprintBehaviour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">newest</Value>
     </Setting>
   </Settings>
 </SettingsFile>

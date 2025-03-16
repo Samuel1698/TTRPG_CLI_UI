@@ -140,7 +140,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("/3-Mechanics/CLI")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("test")>  _
         Public Property Setting_Compendium() As String
             Get
                 Return CType(Me("Setting_Compendium"),String)
@@ -152,7 +152,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("/3-Mechanics/CLI")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("test")>  _
         Public Property Setting_Rules() As String
             Get
                 Return CType(Me("Setting_Rules"),String)
@@ -188,7 +188,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("PHB,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"DMG")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("xPHB,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"xDMG,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"xMM,")>  _
         Public Property Setting_Book() As String
             Get
                 Return CType(Me("Setting_Book"),String)
@@ -257,6 +257,126 @@ Namespace My
                 Me("Setting_ImageFolder") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting_DataFolder_Full() As String
+            Get
+                Return CType(Me("Setting_DataFolder_Full"),String)
+            End Get
+            Set
+                Me("Setting_DataFolder_Full") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting_Homebrew_Folder() As String
+            Get
+                Return CType(Me("Setting_Homebrew_Folder"),String)
+            End Get
+            Set
+                Me("Setting_Homebrew_Folder") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting_Homebrew() As String
+            Get
+                Return CType(Me("Setting_Homebrew"),String)
+            End Get
+            Set
+                Me("Setting_Homebrew") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting_InstallTemplateLocation() As String
+            Get
+                Return CType(Me("Setting_InstallTemplateLocation"),String)
+            End Get
+            Set
+                Me("Setting_InstallTemplateLocation") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Setting_Use_FantasyStat() As Boolean
+            Get
+                Return CType(Me("Setting_Use_FantasyStat"),Boolean)
+            End Get
+            Set
+                Me("Setting_Use_FantasyStat") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Setting_Use_DiceRoller() As Boolean
+            Get
+                Return CType(Me("Setting_Use_DiceRoller"),Boolean)
+            End Get
+            Set
+                Me("Setting_Use_DiceRoller") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Setting_Copy_ExternalImages() As Boolean
+            Get
+                Return CType(Me("Setting_Copy_ExternalImages"),Boolean)
+            End Get
+            Set
+                Me("Setting_Copy_ExternalImages") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property Setting_Copy_InternalImages() As Boolean
+            Get
+                Return CType(Me("Setting_Copy_InternalImages"),Boolean)
+            End Get
+            Set
+                Me("Setting_Copy_InternalImages") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting_Reference() As String
+            Get
+                Return CType(Me("Setting_Reference"),String)
+            End Get
+            Set
+                Me("Setting_Reference") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("newest")>  _
+        Public Property Setting_ReprintBehaviour() As String
+            Get
+                Return CType(Me("Setting_ReprintBehaviour"),String)
+            End Get
+            Set
+                Me("Setting_ReprintBehaviour") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
@@ -268,9 +388,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.TTRPF_CLI_UI.My.MySettings
+        Friend ReadOnly Property Settings() As Global.TTRPG_CLI_UI_Project.My.MySettings
             Get
-                Return Global.TTRPF_CLI_UI.My.MySettings.Default
+                Return Global.TTRPG_CLI_UI_Project.My.MySettings.Default
             End Get
         End Property
     End Module
