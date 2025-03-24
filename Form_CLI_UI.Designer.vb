@@ -26,9 +26,12 @@ Partial Class Form_CLI_UI
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_CLI_UI))
         FolderBrowserDialog1 = New FolderBrowserDialog()
         TabPage_RunCLI = New TabPage()
+        PictureBox10 = New PictureBox()
+        Button10 = New Button()
+        Button9 = New Button()
+        Button4 = New Button()
         TextBox5 = New TextBox()
         TextBox4 = New TextBox()
-        Label7 = New Label()
         Button6 = New Button()
         Button7 = New Button()
         Button8 = New Button()
@@ -54,11 +57,20 @@ Partial Class Form_CLI_UI
         Button_Folder_Browse = New Button()
         Button_Run_CLI = New Button()
         TabPage_Config = New TabPage()
+        PictureBox9 = New PictureBox()
+        PictureBox8 = New PictureBox()
+        PictureBox7 = New PictureBox()
+        PictureBox6 = New PictureBox()
+        PictureBox5 = New PictureBox()
+        PictureBox4 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        Button2 = New Button()
+        Button1 = New Button()
         PictureBox_SourceMap3 = New PictureBox()
         PictureBox_SourceMap2 = New PictureBox()
         PictureBox_SourceMap = New PictureBox()
-        Label38 = New Label()
-        Label14 = New Label()
+        Label_ReprintBehaviour = New Label()
         ComboBox_ReprintBehaviour = New ComboBox()
         Label6 = New Label()
         Button_Source_Map = New Button()
@@ -82,7 +94,7 @@ Partial Class Form_CLI_UI
         Label22 = New Label()
         Button_Build_Json = New Button()
         Label18 = New Label()
-        Label17 = New Label()
+        Label_TagPrefix = New Label()
         CheckBox_Img_Internal = New CheckBox()
         CheckBox_Img_External = New CheckBox()
         CheckBox_DiceRoller = New CheckBox()
@@ -139,9 +151,20 @@ Partial Class Form_CLI_UI
         Button_SelectCLIHome = New Button()
         Button_InstallGit = New Button()
         TabControl1 = New TabControl()
-        ToolTip1 = New ToolTip(components)
+        ToolTip_ReprintBehaviour = New ToolTip(components)
+        ToolTip_TagPrefix = New ToolTip(components)
+        ImageList1 = New ImageList(components)
         TabPage_RunCLI.SuspendLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         TabPage_Config.SuspendLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox_SourceMap3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox_SourceMap2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox_SourceMap, ComponentModel.ISupportInitialize).BeginInit()
@@ -154,9 +177,12 @@ Partial Class Form_CLI_UI
         ' 
         ' TabPage_RunCLI
         ' 
+        TabPage_RunCLI.Controls.Add(PictureBox10)
+        TabPage_RunCLI.Controls.Add(Button10)
+        TabPage_RunCLI.Controls.Add(Button9)
+        TabPage_RunCLI.Controls.Add(Button4)
         TabPage_RunCLI.Controls.Add(TextBox5)
         TabPage_RunCLI.Controls.Add(TextBox4)
-        TabPage_RunCLI.Controls.Add(Label7)
         TabPage_RunCLI.Controls.Add(Button6)
         TabPage_RunCLI.Controls.Add(Button7)
         TabPage_RunCLI.Controls.Add(Button8)
@@ -189,6 +215,44 @@ Partial Class Form_CLI_UI
         TabPage_RunCLI.Text = "Run CLI"
         TabPage_RunCLI.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox10
+        ' 
+        PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
+        PictureBox10.InitialImage = CType(resources.GetObject("PictureBox10.InitialImage"), Image)
+        PictureBox10.Location = New Point(964, 104)
+        PictureBox10.Name = "PictureBox10"
+        PictureBox10.Size = New Size(253, 266)
+        PictureBox10.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox10.TabIndex = 45
+        PictureBox10.TabStop = False
+        ' 
+        ' Button10
+        ' 
+        Button10.Location = New Point(745, 483)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(213, 23)
+        Button10.TabIndex = 44
+        Button10.Text = "Report / Known Issue(s)"
+        Button10.UseVisualStyleBackColor = True
+        ' 
+        ' Button9
+        ' 
+        Button9.Location = New Point(745, 454)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(213, 23)
+        Button9.TabIndex = 43
+        Button9.Text = "Reporting Content Errors"
+        Button9.UseVisualStyleBackColor = True
+        ' 
+        ' Button4
+        ' 
+        Button4.Location = New Point(745, 425)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(213, 23)
+        Button4.TabIndex = 42
+        Button4.Text = "Common Errors"
+        Button4.UseVisualStyleBackColor = True
+        ' 
         ' TextBox5
         ' 
         TextBox5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
@@ -202,7 +266,7 @@ Partial Class Form_CLI_UI
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(772, 185)
+        TextBox4.Location = New Point(745, 98)
         TextBox4.Multiline = True
         TextBox4.Name = "TextBox4"
         TextBox4.ReadOnly = True
@@ -210,36 +274,29 @@ Partial Class Form_CLI_UI
         TextBox4.TabIndex = 40
         TextBox4.Text = resources.GetString("TextBox4.Text")
         ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(819, 60)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(115, 15)
-        Label7.TabIndex = 39
-        Label7.Text = "WORK IN PROGRESS"
-        ' 
         ' Button6
         ' 
-        Button6.Location = New Point(772, 148)
+        Button6.BackColor = Color.PaleTurquoise
+        Button6.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Button6.Location = New Point(964, 376)
         Button6.Name = "Button6"
-        Button6.Size = New Size(213, 23)
+        Button6.Size = New Size(253, 43)
         Button6.TabIndex = 38
         Button6.Text = "Thank Ebulient for her HARD WORK!"
-        Button6.UseVisualStyleBackColor = True
+        Button6.UseVisualStyleBackColor = False
         ' 
         ' Button7
         ' 
-        Button7.Location = New Point(772, 119)
+        Button7.Location = New Point(745, 70)
         Button7.Name = "Button7"
         Button7.Size = New Size(213, 23)
         Button7.TabIndex = 37
-        Button7.Text = "Official TTRPC CLI Documentation"
+        Button7.Text = "Official TTRPG CLI Documentation"
         Button7.UseVisualStyleBackColor = True
         ' 
         ' Button8
         ' 
-        Button8.Location = New Point(772, 90)
+        Button8.Location = New Point(745, 40)
         Button8.Name = "Button8"
         Button8.Size = New Size(213, 23)
         Button8.TabIndex = 36
@@ -424,20 +481,32 @@ Partial Class Form_CLI_UI
         ' 
         ' Button_Run_CLI
         ' 
+        Button_Run_CLI.BackColor = Color.YellowGreen
+        Button_Run_CLI.FlatStyle = FlatStyle.Popup
+        Button_Run_CLI.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button_Run_CLI.Location = New Point(664, 182)
         Button_Run_CLI.Name = "Button_Run_CLI"
         Button_Run_CLI.Size = New Size(75, 23)
         Button_Run_CLI.TabIndex = 15
         Button_Run_CLI.Text = "Run CLI"
-        Button_Run_CLI.UseVisualStyleBackColor = True
+        Button_Run_CLI.UseVisualStyleBackColor = False
         ' 
         ' TabPage_Config
         ' 
+        TabPage_Config.Controls.Add(PictureBox9)
+        TabPage_Config.Controls.Add(PictureBox8)
+        TabPage_Config.Controls.Add(PictureBox7)
+        TabPage_Config.Controls.Add(PictureBox6)
+        TabPage_Config.Controls.Add(PictureBox5)
+        TabPage_Config.Controls.Add(PictureBox4)
+        TabPage_Config.Controls.Add(PictureBox3)
+        TabPage_Config.Controls.Add(PictureBox2)
+        TabPage_Config.Controls.Add(Button2)
+        TabPage_Config.Controls.Add(Button1)
         TabPage_Config.Controls.Add(PictureBox_SourceMap3)
         TabPage_Config.Controls.Add(PictureBox_SourceMap2)
         TabPage_Config.Controls.Add(PictureBox_SourceMap)
-        TabPage_Config.Controls.Add(Label38)
-        TabPage_Config.Controls.Add(Label14)
+        TabPage_Config.Controls.Add(Label_ReprintBehaviour)
         TabPage_Config.Controls.Add(ComboBox_ReprintBehaviour)
         TabPage_Config.Controls.Add(Label6)
         TabPage_Config.Controls.Add(Button_Source_Map)
@@ -461,7 +530,7 @@ Partial Class Form_CLI_UI
         TabPage_Config.Controls.Add(Label22)
         TabPage_Config.Controls.Add(Button_Build_Json)
         TabPage_Config.Controls.Add(Label18)
-        TabPage_Config.Controls.Add(Label17)
+        TabPage_Config.Controls.Add(Label_TagPrefix)
         TabPage_Config.Controls.Add(CheckBox_Img_Internal)
         TabPage_Config.Controls.Add(CheckBox_Img_External)
         TabPage_Config.Controls.Add(CheckBox_DiceRoller)
@@ -484,6 +553,112 @@ Partial Class Form_CLI_UI
         TabPage_Config.TabIndex = 1
         TabPage_Config.Text = "Create Config File"
         TabPage_Config.UseVisualStyleBackColor = True
+        ' 
+        ' PictureBox9
+        ' 
+        PictureBox9.Image = My.Resources.Resources.Information
+        PictureBox9.InitialImage = CType(resources.GetObject("PictureBox9.InitialImage"), Image)
+        PictureBox9.Location = New Point(314, 320)
+        PictureBox9.Name = "PictureBox9"
+        PictureBox9.Size = New Size(32, 21)
+        PictureBox9.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox9.TabIndex = 87
+        PictureBox9.TabStop = False
+        ' 
+        ' PictureBox8
+        ' 
+        PictureBox8.Image = My.Resources.Resources.Information
+        PictureBox8.InitialImage = CType(resources.GetObject("PictureBox8.InitialImage"), Image)
+        PictureBox8.Location = New Point(6, 204)
+        PictureBox8.Name = "PictureBox8"
+        PictureBox8.Size = New Size(32, 21)
+        PictureBox8.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox8.TabIndex = 86
+        PictureBox8.TabStop = False
+        ' 
+        ' PictureBox7
+        ' 
+        PictureBox7.Image = My.Resources.Resources.Information
+        PictureBox7.InitialImage = CType(resources.GetObject("PictureBox7.InitialImage"), Image)
+        PictureBox7.Location = New Point(6, 177)
+        PictureBox7.Name = "PictureBox7"
+        PictureBox7.Size = New Size(32, 21)
+        PictureBox7.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox7.TabIndex = 85
+        PictureBox7.TabStop = False
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.Image = My.Resources.Resources.Information
+        PictureBox6.InitialImage = CType(resources.GetObject("PictureBox6.InitialImage"), Image)
+        PictureBox6.Location = New Point(964, 3)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(32, 21)
+        PictureBox6.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox6.TabIndex = 84
+        PictureBox6.TabStop = False
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Image = My.Resources.Resources.Information
+        PictureBox5.InitialImage = CType(resources.GetObject("PictureBox5.InitialImage"), Image)
+        PictureBox5.Location = New Point(6, 231)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(32, 21)
+        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox5.TabIndex = 83
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = My.Resources.Resources.Information
+        PictureBox4.InitialImage = CType(resources.GetObject("PictureBox4.InitialImage"), Image)
+        PictureBox4.Location = New Point(6, 455)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(32, 21)
+        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox4.TabIndex = 82
+        PictureBox4.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = My.Resources.Resources.Information
+        PictureBox3.InitialImage = CType(resources.GetObject("PictureBox3.InitialImage"), Image)
+        PictureBox3.Location = New Point(6, 430)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(32, 21)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 81
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = My.Resources.Resources.Information
+        PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), Image)
+        PictureBox2.Location = New Point(6, 405)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(32, 21)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 80
+        PictureBox2.TabStop = False
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(108, 146)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(111, 23)
+        Button2.TabIndex = 79
+        Button2.Text = "Homebrew Guide"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(8, 146)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(94, 23)
+        Button1.TabIndex = 78
+        Button1.Text = "Config Guide"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' PictureBox_SourceMap3
         ' 
@@ -518,24 +693,14 @@ Partial Class Form_CLI_UI
         PictureBox_SourceMap.TabIndex = 75
         PictureBox_SourceMap.TabStop = False
         ' 
-        ' Label38
+        ' Label_ReprintBehaviour
         ' 
-        Label38.AutoSize = True
-        Label38.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label38.Location = New Point(247, 591)
-        Label38.Name = "Label38"
-        Label38.Size = New Size(112, 30)
-        Label38.TabIndex = 74
-        Label38.Text = "Save Config " & vbCrLf & "Before Proceeding"
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Location = New Point(249, 483)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(101, 15)
-        Label14.TabIndex = 55
-        Label14.Text = "Reprint Behaviour"
+        Label_ReprintBehaviour.AutoSize = True
+        Label_ReprintBehaviour.Location = New Point(249, 483)
+        Label_ReprintBehaviour.Name = "Label_ReprintBehaviour"
+        Label_ReprintBehaviour.Size = New Size(101, 15)
+        Label_ReprintBehaviour.TabIndex = 55
+        Label_ReprintBehaviour.Text = "Reprint Behaviour"
         ' 
         ' ComboBox_ReprintBehaviour
         ' 
@@ -560,7 +725,7 @@ Partial Class Form_CLI_UI
         ' 
         ' Button_Source_Map
         ' 
-        Button_Source_Map.Location = New Point(8, 146)
+        Button_Source_Map.Location = New Point(225, 146)
         Button_Source_Map.Name = "Button_Source_Map"
         Button_Source_Map.Size = New Size(80, 23)
         Button_Source_Map.TabIndex = 52
@@ -579,7 +744,7 @@ Partial Class Form_CLI_UI
         ' Label26
         ' 
         Label26.AutoSize = True
-        Label26.Location = New Point(964, 6)
+        Label26.Location = New Point(1002, 6)
         Label26.Name = "Label26"
         Label26.Size = New Size(66, 15)
         Label26.TabIndex = 50
@@ -638,17 +803,17 @@ Partial Class Form_CLI_UI
         ' 
         ' TextBox_Rules_Location
         ' 
-        TextBox_Rules_Location.Location = New Point(6, 204)
+        TextBox_Rules_Location.Location = New Point(46, 204)
         TextBox_Rules_Location.Name = "TextBox_Rules_Location"
-        TextBox_Rules_Location.Size = New Size(235, 23)
+        TextBox_Rules_Location.Size = New Size(195, 23)
         TextBox_Rules_Location.TabIndex = 3
         TextBox_Rules_Location.Text = "/3-Mechanics/CLI"
         ' 
         ' TextBox_Compendium_Location
         ' 
-        TextBox_Compendium_Location.Location = New Point(6, 175)
+        TextBox_Compendium_Location.Location = New Point(46, 175)
         TextBox_Compendium_Location.Name = "TextBox_Compendium_Location"
-        TextBox_Compendium_Location.Size = New Size(235, 23)
+        TextBox_Compendium_Location.Size = New Size(195, 23)
         TextBox_Compendium_Location.TabIndex = 2
         TextBox_Compendium_Location.Text = "/3-Mechanics/CLI"
         ' 
@@ -674,7 +839,7 @@ Partial Class Form_CLI_UI
         ' CheckBox_FantStatPlugin
         ' 
         CheckBox_FantStatPlugin.AutoSize = True
-        CheckBox_FantStatPlugin.Location = New Point(6, 233)
+        CheckBox_FantStatPlugin.Location = New Point(46, 233)
         CheckBox_FantStatPlugin.Name = "CheckBox_FantStatPlugin"
         CheckBox_FantStatPlugin.Size = New Size(182, 19)
         CheckBox_FantStatPlugin.TabIndex = 48
@@ -730,12 +895,15 @@ Partial Class Form_CLI_UI
         ' 
         ' Button_Build_Json
         ' 
+        Button_Build_Json.BackColor = Color.YellowGreen
+        Button_Build_Json.FlatStyle = FlatStyle.Popup
+        Button_Build_Json.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button_Build_Json.Location = New Point(6, 596)
         Button_Build_Json.Name = "Button_Build_Json"
         Button_Build_Json.Size = New Size(235, 23)
         Button_Build_Json.TabIndex = 41
         Button_Build_Json.Text = "Save Config"
-        Button_Build_Json.UseVisualStyleBackColor = True
+        Button_Build_Json.UseVisualStyleBackColor = False
         ' 
         ' Label18
         ' 
@@ -746,19 +914,19 @@ Partial Class Form_CLI_UI
         Label18.TabIndex = 40
         Label18.Text = "Img Folder Name"
         ' 
-        ' Label17
+        ' Label_TagPrefix
         ' 
-        Label17.AutoSize = True
-        Label17.Location = New Point(247, 512)
-        Label17.Name = "Label17"
-        Label17.Size = New Size(58, 15)
-        Label17.TabIndex = 38
-        Label17.Text = "Tag Prefix"
+        Label_TagPrefix.AutoSize = True
+        Label_TagPrefix.Location = New Point(247, 512)
+        Label_TagPrefix.Name = "Label_TagPrefix"
+        Label_TagPrefix.Size = New Size(58, 15)
+        Label_TagPrefix.TabIndex = 38
+        Label_TagPrefix.Text = "Tag Prefix"
         ' 
         ' CheckBox_Img_Internal
         ' 
         CheckBox_Img_Internal.AutoSize = True
-        CheckBox_Img_Internal.Location = New Point(6, 455)
+        CheckBox_Img_Internal.Location = New Point(46, 457)
         CheckBox_Img_Internal.Name = "CheckBox_Img_Internal"
         CheckBox_Img_Internal.Size = New Size(138, 19)
         CheckBox_Img_Internal.TabIndex = 36
@@ -768,7 +936,7 @@ Partial Class Form_CLI_UI
         ' CheckBox_Img_External
         ' 
         CheckBox_Img_External.AutoSize = True
-        CheckBox_Img_External.Location = New Point(6, 430)
+        CheckBox_Img_External.Location = New Point(46, 432)
         CheckBox_Img_External.Name = "CheckBox_Img_External"
         CheckBox_Img_External.Size = New Size(139, 19)
         CheckBox_Img_External.TabIndex = 35
@@ -778,7 +946,7 @@ Partial Class Form_CLI_UI
         ' CheckBox_DiceRoller
         ' 
         CheckBox_DiceRoller.AutoSize = True
-        CheckBox_DiceRoller.Location = New Point(6, 405)
+        CheckBox_DiceRoller.Location = New Point(46, 407)
         CheckBox_DiceRoller.Name = "CheckBox_DiceRoller"
         CheckBox_DiceRoller.Size = New Size(104, 19)
         CheckBox_DiceRoller.TabIndex = 34
@@ -1306,6 +1474,12 @@ Partial Class Form_CLI_UI
         TabControl1.Size = New Size(1295, 652)
         TabControl1.TabIndex = 15
         ' 
+        ' ImageList1
+        ' 
+        ImageList1.ColorDepth = ColorDepth.Depth32Bit
+        ImageList1.ImageSize = New Size(16, 16)
+        ImageList1.TransparentColor = Color.Transparent
+        ' 
         ' Form_CLI_UI
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1318,8 +1492,17 @@ Partial Class Form_CLI_UI
         Text = "TTRPG CLI UI - for 5e"
         TabPage_RunCLI.ResumeLayout(False)
         TabPage_RunCLI.PerformLayout()
+        CType(PictureBox10, ComponentModel.ISupportInitialize).EndInit()
         TabPage_Config.ResumeLayout(False)
         TabPage_Config.PerformLayout()
+        CType(PictureBox9, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox8, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox7, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox_SourceMap3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox_SourceMap2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox_SourceMap, ComponentModel.ISupportInitialize).EndInit()
@@ -1337,7 +1520,6 @@ Partial Class Form_CLI_UI
     Friend WithEvents ComboBox_Items_Template As ComboBox
     Friend WithEvents TabPage_RunCLI As TabPage
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
@@ -1430,9 +1612,8 @@ Partial Class Form_CLI_UI
     Friend WithEvents Button_Browse_Image_Folder As Button
     Friend WithEvents Button_Browse_Data_Source As Button
     Friend WithEvents ComboBox_ReprintBehaviour As ComboBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Label_ReprintBehaviour As Label
+    Friend WithEvents Label_TagPrefix As Label
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label30 As Label
     Friend WithEvents Label29 As Label
@@ -1446,9 +1627,25 @@ Partial Class Form_CLI_UI
     Friend WithEvents Label37 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label35 As Label
-    Friend WithEvents Label38 As Label
     Friend WithEvents PictureBox_SourceMap As PictureBox
     Friend WithEvents PictureBox_SourceMap2 As PictureBox
     Friend WithEvents PictureBox_SourceMap3 As PictureBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents ToolTip_ReprintBehaviour As ToolTip
+    Friend WithEvents ToolTip_TagPrefix As ToolTip
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents ImageList1 As ImageList
 
 End Class

@@ -3,10 +3,11 @@ Imports System.Net.Http
 Imports System.IO.Compression
 Imports Newtonsoft.Json.Linq
 Imports System.Linq
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form_CLI_UI
 
-    Private WithEvents infoToolTip As New ToolTip()
+
 
     Private Sub Form_CLI_UI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load the saved value for Template Location
@@ -33,6 +34,14 @@ Public Class Form_CLI_UI
         ComboBox_ReprintBehaviour.Text = My.Settings.Setting_ReprintBehaviour
         Text_CLI_Source.Text = My.Settings.CLIInstallLocation
 
+        Label_TagPrefix.Cursor = Cursors.Hand
+        Label_ReprintBehaviour.Cursor = Cursors.Hand
+
+        ToolTip_ReprintBehaviour.SetToolTip(Label_ReprintBehaviour, "newest (default): Only includes notes for the most recent version of reprinted content.
+edition: Focuses on preserving content across incompatible editions (especially for 5e rules).
+         Example: The edition check will preserve 2014 edition-specific class and subclass definitions. 
+         Other resources (that are not different across editions) will follow the reprints to include new content.
+all: Includes notes for all reprinted versions from enabled sources")
 
         ' Set the CheckBox value based on the Setting_Use_FantasyStat setting
         CheckBox_FantStatPlugin.Checked = My.Settings.Setting_Use_FantasyStat
@@ -1627,7 +1636,7 @@ Public Class Form_CLI_UI
 
 
     Private Sub PictureBox_SourceMap3_Click(sender As Object, e As EventArgs) Handles PictureBox_SourceMap3.Click
-        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/sourceMap.md" ' Replace with your desired URL.
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/sourceMap.md"
         Try
             Dim psi As New ProcessStartInfo With {
             .FileName = url,
@@ -1639,6 +1648,207 @@ Public Class Form_CLI_UI
         End Try
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
 
+    Private Sub Button2_Click_2(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli?tab=readme-ov-file#convert-homebrew-json-data"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim url = "https://obsidianttrpgtutorials.com/Obsidian+TTRPG+Tutorials/Plugin+Tutorials/TTRPG-Convert-CLI/TTRPG-Convert-CLI+5e#Common+Errors"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#reporting-content-errors-to-5etools"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/issues"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Label_TagPrefix_Click(sender As Object, e As EventArgs) Handles Label_TagPrefix.Click
+        Dim url As String = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#tag-prefix"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Label_ReprintBehaviour_Click(sender As Object, e As EventArgs) Handles Label_ReprintBehaviour.Click
+        Dim url As String = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#reprint-behavior"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#use-the-dice-roller-plugin"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#render-with-fantasy-statblocks"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#images"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#images"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#homebrew"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#specify-target-paths-paths-key"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#specify-target-paths-paths-key"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/blob/main/docs/configuration.md#templates"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+
+    End Sub
+
+    Private Sub Label38_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
 
