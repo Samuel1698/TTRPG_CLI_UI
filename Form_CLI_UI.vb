@@ -1850,5 +1850,18 @@ all: Includes notes for all reprinted versions from enabled sources")
     Private Sub Label38_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim url = "https://buymeacoffee.com/ebullient"
+        Try
+            Dim psi As New ProcessStartInfo With {
+                .FileName = url,
+                .UseShellExecute = True
+            }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
 End Class
 
