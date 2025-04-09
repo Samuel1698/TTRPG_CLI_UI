@@ -99,8 +99,8 @@ all: Includes notes for all reprinted versions from enabled sources")
         ' "paths" section
         configText &= vbCrLf & "  ""paths"" : {"
         ' These are static values based on your example; change as needed if you have settings for these.
-        configText &= vbCrLf & "    ""rules"" : ""3-Mechanics/CLI/rules/"","
-        configText &= vbCrLf & "    ""compendium"" : ""3-Mechanics/CLI/"""
+        configText &= vbCrLf & "    ""rules"" : """ & TextBox_Rules_Location.Text & ""","
+        configText &= vbCrLf & "    ""compendium"" : """ & TextBox_Compendium_Location.Text & """"
         configText &= vbCrLf & "  },"
 
         ' "images" section
@@ -648,7 +648,7 @@ all: Includes notes for all reprinted versions from enabled sources")
     End Sub
 
     Private Sub Button_Download_SourceData_Click(sender As Object, e As EventArgs) Handles Button_Download_SourceData.Click
-        Dim downloadUrl = "https://github.com/5etools-mirror-3/5etools-src/releases/tag/v1.210.4"
+        Dim downloadUrl = "https://github.com/5etools-mirror-3/5etools-src/releases/latest"
 
         Try
             ' Using ProcessStartInfo to open the URL
@@ -662,7 +662,7 @@ all: Includes notes for all reprinted versions from enabled sources")
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim downloadUrl = "https://github.com/5etools-mirror-3/5etools-img/releases/tag/v1.210.4"
+        Dim downloadUrl = "https://github.com/5etools-mirror-3/5etools-img/releases/latest"
 
         Try
             ' Using ProcessStartInfo to open the URL
