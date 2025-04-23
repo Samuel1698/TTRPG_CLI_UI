@@ -110,6 +110,11 @@ all: Includes notes for all reprinted versions from enabled sources")
         configText &= vbCrLf & "    ""internalRoot"" : """ & TextBox_Img_Folder.Text & """"
         configText &= vbCrLf & "  },"
 
+        ' --- INSERT: optional yamlStatblocks ---
+        If CheckBox_FantStatPlugin.Checked Then
+            configText &= vbCrLf & "  ""yamlStatblocks"" : true,"
+        End If
+
         ' "reprintBehavior" section (static value "all")
         configText &= vbCrLf & "  ""reprintBehavior"" : """ & ComboBox_ReprintBehaviour.Text & ""","
 
@@ -571,7 +576,7 @@ all: Includes notes for all reprinted versions from enabled sources")
             ' Show the dialog and check if the user selected a file
             If openFileDialog.ShowDialog = DialogResult.OK Then
                 ' Get only the file name and update TextBox_Config_File
-                TextBox_Config_File.Text = IO.Path.GetFileName(openFileDialog.FileName)
+                TextBox_Config_File.Text = Path.GetFileName(openFileDialog.FileName)
             End If
         End Using
     End Sub
@@ -1858,6 +1863,70 @@ all: Includes notes for all reprinted versions from enabled sources")
                 .FileName = url,
                 .UseShellExecute = True
             }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim url = "https://obsidianttrpgtutorials.com"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim url = "https://github.com/ebullient/ttrpg-convert-cli/"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            MessageBox.Show("Could not open the website: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        ' Build the examples/css-snippets path under the CLI home folder
+        Dim examplesPath = Path.Combine(TextBox_CLIHome.Text, "examples", "css-snippets")
+
+        If Directory.Exists(examplesPath) Then
+            ' Open the folder in Windows Explorer
+            Dim psi As New ProcessStartInfo With {
+                .FileName = "explorer.exe",
+                .Arguments = """" & examplesPath & """",
+                .UseShellExecute = False
+            }
+            Process.Start(psi)
+        Else
+            MessageBox.Show($"Folder not found:{Environment.NewLine}{examplesPath}", "Path Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub Label14_Click_1(sender As Object, e As EventArgs) Handles Label14.Click
+
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Dim url = "https://obsidianttrpgtutorials.com/Obsidian+TTRPG+Tutorials/Tutorials/Basic+Tool+Usage/How+To+-+Install+Custom+CSS"
+        Try
+            Dim psi As New ProcessStartInfo With {
+            .FileName = url,
+            .UseShellExecute = True
+        }
             Process.Start(psi)
         Catch ex As Exception
             MessageBox.Show("Could not open the website: " & ex.Message)

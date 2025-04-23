@@ -26,6 +26,9 @@ Partial Class Form_CLI_UI
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_CLI_UI))
         FolderBrowserDialog1 = New FolderBrowserDialog()
         TabPage_RunCLI = New TabPage()
+        Button12 = New Button()
+        Label17 = New Label()
+        Button11 = New Button()
         PictureBox10 = New PictureBox()
         Button10 = New Button()
         Button9 = New Button()
@@ -111,6 +114,7 @@ Partial Class Form_CLI_UI
         Label10 = New Label()
         Label9 = New Label()
         TabPage_Setup = New TabPage()
+        Label7 = New Label()
         Label37 = New Label()
         Label36 = New Label()
         Label35 = New Label()
@@ -154,6 +158,7 @@ Partial Class Form_CLI_UI
         ToolTip_ReprintBehaviour = New ToolTip(components)
         ToolTip_TagPrefix = New ToolTip(components)
         ImageList1 = New ImageList(components)
+        Label14 = New Label()
         TabPage_RunCLI.SuspendLayout()
         CType(PictureBox10, ComponentModel.ISupportInitialize).BeginInit()
         TabPage_Config.SuspendLayout()
@@ -177,6 +182,10 @@ Partial Class Form_CLI_UI
         ' 
         ' TabPage_RunCLI
         ' 
+        TabPage_RunCLI.Controls.Add(Label14)
+        TabPage_RunCLI.Controls.Add(Button12)
+        TabPage_RunCLI.Controls.Add(Label17)
+        TabPage_RunCLI.Controls.Add(Button11)
         TabPage_RunCLI.Controls.Add(PictureBox10)
         TabPage_RunCLI.Controls.Add(Button10)
         TabPage_RunCLI.Controls.Add(Button9)
@@ -215,6 +224,33 @@ Partial Class Form_CLI_UI
         TabPage_RunCLI.Text = "Run CLI"
         TabPage_RunCLI.UseVisualStyleBackColor = True
         ' 
+        ' Button12
+        ' 
+        Button12.Location = New Point(290, 329)
+        Button12.Name = "Button12"
+        Button12.Size = New Size(130, 23)
+        Button12.TabIndex = 49
+        Button12.Text = "How To: Enable CSS"
+        Button12.UseVisualStyleBackColor = True
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Location = New Point(426, 333)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(270, 15)
+        Label17.TabIndex = 48
+        Label17.Text = "Check the read-me. I use dnd5e-compendium.css"
+        ' 
+        ' Button11
+        ' 
+        Button11.Location = New Point(176, 329)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(108, 23)
+        Button11.TabIndex = 46
+        Button11.Text = "Open CSS Folder"
+        Button11.UseVisualStyleBackColor = True
+        ' 
         ' PictureBox10
         ' 
         PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), Image)
@@ -228,7 +264,7 @@ Partial Class Form_CLI_UI
         ' 
         ' Button10
         ' 
-        Button10.Location = New Point(745, 483)
+        Button10.Location = New Point(745, 512)
         Button10.Name = "Button10"
         Button10.Size = New Size(213, 23)
         Button10.TabIndex = 44
@@ -237,7 +273,7 @@ Partial Class Form_CLI_UI
         ' 
         ' Button9
         ' 
-        Button9.Location = New Point(745, 454)
+        Button9.Location = New Point(745, 483)
         Button9.Name = "Button9"
         Button9.Size = New Size(213, 23)
         Button9.TabIndex = 43
@@ -246,7 +282,7 @@ Partial Class Form_CLI_UI
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(745, 425)
+        Button4.Location = New Point(745, 454)
         Button4.Name = "Button4"
         Button4.Size = New Size(213, 23)
         Button4.TabIndex = 42
@@ -270,7 +306,7 @@ Partial Class Form_CLI_UI
         TextBox4.Multiline = True
         TextBox4.Name = "TextBox4"
         TextBox4.ReadOnly = True
-        TextBox4.Size = New Size(213, 321)
+        TextBox4.Size = New Size(213, 350)
         TextBox4.TabIndex = 40
         TextBox4.Text = resources.GetString("TextBox4.Text")
         ' 
@@ -305,7 +341,7 @@ Partial Class Form_CLI_UI
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(8, 329)
+        TextBox3.Location = New Point(9, 358)
         TextBox3.Multiline = True
         TextBox3.Name = "TextBox3"
         TextBox3.ReadOnly = True
@@ -1058,6 +1094,7 @@ Partial Class Form_CLI_UI
         ' 
         ' TabPage_Setup
         ' 
+        TabPage_Setup.Controls.Add(Label7)
         TabPage_Setup.Controls.Add(Label37)
         TabPage_Setup.Controls.Add(Label36)
         TabPage_Setup.Controls.Add(Label35)
@@ -1104,6 +1141,16 @@ Partial Class Form_CLI_UI
         TabPage_Setup.TabIndex = 0
         TabPage_Setup.Text = "Setup Data"
         TabPage_Setup.UseVisualStyleBackColor = True
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label7.Location = New Point(815, 59)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(294, 15)
+        Label7.TabIndex = 76
+        Label7.Text = "This folder should be outside of your Obsidian Vault!"
         ' 
         ' Label37
         ' 
@@ -1480,6 +1527,15 @@ Partial Class Form_CLI_UI
         ImageList1.ImageSize = New Size(16, 16)
         ImageList1.TransparentColor = Color.Transparent
         ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Location = New Point(9, 333)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(122, 15)
+        Label14.TabIndex = 50
+        Label14.Text = "Copy CSS and Enable:"
+        ' 
         ' Form_CLI_UI
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1647,5 +1703,10 @@ Partial Class Form_CLI_UI
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Label14 As Label
 
 End Class
