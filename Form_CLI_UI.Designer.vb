@@ -1693,6 +1693,7 @@ Partial Class Form_CLI_UI
     Friend WithEvents Button10 As Button
     Friend WithEvents ToolTip_ReprintBehaviour As ToolTip
     Friend WithEvents ToolTip_TagPrefix As ToolTip
+    Friend WithEvents Button_Load_Config As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox

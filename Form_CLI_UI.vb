@@ -307,6 +307,50 @@ all: Includes notes for all reprinted versions from enabled sources")
         End If
     End Sub
 
+    Private Sub Button_Load_Config_Click(sender As Object, e As EventArgs) Handles Button_Load_Config.Click
+        ' Open a file dialog to select the JSON config file
+        Using openFileDialog As New OpenFileDialog
+            openFileDialog.Filter = "JSON Files (*.json)|*.json"
+            openFileDialog.Title = "Select a Configuration File"
+
+            If openFileDialog.ShowDialog() = DialogResult.OK Then
+                Try
+                    ' Read the JSON file
+                    Dim jsonContent As String = File.ReadAllText(openFileDialog.FileName)
+
+                    ' Parse the JSON content
+                    Dim config As JObject = JObject.Parse(jsonContent)
+
+                    ' Populate the fields with the values from the JSON
+                    TextBox_Config_Name.Text = Path.GetFileName(openFileDialog.FileName)
+                    TextBox_From.Text = config("sources")?("reference")?.ToString()
+                    TextBox_Adventure.Text = config("sources")?("adventure")?.ToString()
+                    TextBox_Book.Text = config("sources")?("books")?.ToString()
+                    TextBox_Rules_Location.Text = config("rules")?.ToString()
+                    TextBox_Compendium_Location.Text = config("compendium")?.ToString()
+                    TextBox_Img_Folder.Text = config("images")?("internalRoot")?.ToString()
+                    TextBox_tagPrefix.Text = config("tagPrefix")?.ToString()
+                    ComboBox_ReprintBehaviour.Text = config("reprintBehavior")?.ToString()
+                    CheckBox_DiceRoller.Checked = Boolean.Parse(config("useDiceRoller")?.ToString() ?? "False")
+                    CheckBox_Img_Internal.Checked = Boolean.Parse(config("images")?("copyInternal")?.ToString() ?? "False")
+                    CheckBox_Img_External.Checked = Boolean.Parse(config("images")?("copyExternal")?.ToString() ?? "False")
+                    CheckBox_FantStatPlugin.Checked = Boolean.Parse(config("yamlStatblocks")?.ToString() ?? "False")
+
+                    ' Populate template ComboBoxes
+                    ComboBox_Background_Template.Text = config("template")?("background")?.ToString()
+                    ComboBox_Monster_Template.Text = config("template")?("monster")?.ToString()
+                    ComboBox_Item_Template.Text = config("template")?("item")?.ToString()
+                    ComboBox_Template_Race.Text = config("template")?("race")?.ToString()
+                    ComboBox_Spell_Template.Text = config("template")?("spell")?.ToString()
+
+                    MessageBox.Show("Configuration loaded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Catch ex As Exception
+                    MessageBox.Show("Failed to load configuration: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
+        End Using
+    End Sub
+    
     Private Sub Button_Folder_Browse_Click(sender As Object, e As EventArgs)
         ' Create a new instance of FolderBrowserDialog
         Using folderDialog As New FolderBrowserDialog
